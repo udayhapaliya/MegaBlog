@@ -23,7 +23,7 @@ class AuthService {
             else return userAccount;
         }
         catch (error) {
-            throw error;
+            console.log(error);
         }
     }
 
@@ -34,26 +34,24 @@ class AuthService {
             );
         }
         catch (error) {
-            throw error;
+            console.log(error);
         }
     }
 
     async getCurrentUser() {
         try {
             return await this.account.get();
-        }
-        catch (error) {
+        } catch (error) {
             return null;
         }
-
     }
 
     async logout() {
-        try{
+        try {
             await this.account.deleteSessions();
         }
-        catch{
-            throw error;
+        catch (error) {
+            console.log(error);
         }
     }
 }

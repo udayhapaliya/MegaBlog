@@ -61,7 +61,7 @@ function Signup() {
                         <Input
                             label="Full Name :"
                             placeholder="Enter you full name"
-                            type="email"
+                            type="text"
                             {...register("name", {
                                 required: true
                             })}
